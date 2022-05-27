@@ -1,107 +1,263 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 1000px;
+    width: 100%;
+    background: #FFFFFF;
+    margin: 0 0 0 0;
 }
 
-/* CABEÇALHO */
+.nomePrincipal {
+    position: absolute;
+    width: 1463px;
+    height: 55px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
+}
+
+.nomePrincipal p {
+    position: absolute;
+    width: 80px;
+    height: 27px;
+    left: 692px;
+    top: 0px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+
+    color: #212529;
+}
+
 .filtersContainer {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
+    flex-direction: row;
 }
 
-.estiloGeralBotoes{
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 20px;
+.mostrarTodos {
+    box-sizing: border-box;
     cursor: pointer;
-    display: block;
-    font-size: 0.9rem;
-}
 
-.estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
-}
-
-.estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
-    color: white;
-}
-
-.containerBuscaPorNome {
     display: flex;
-    justify-content: space-between;
-}
-
-.campoBuscaPorNome {
-    border-radius: 5px 0 0 5px;
-    border: 1px solid black;
-    padding: 0 10px;
-}
-
-.estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
-    color: white;
-    border-radius: 0 5px 5px 0;
-}
-
-/* CONTEÚDO */
-main{}
-
-.containerListaProdutos {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.containerListaProdutos ul {
-    list-style: none;
-    text-align: center;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+
+    position: absolute;
+    width: 177px;
+    height: 52px;
+    left: 146px;
+    top: 94px;
+
+    color: white;
+    background: #12B886;
+    border: 1.5px solid #12B886;
+    border-radius: 8px;
 }
 
-.containerListaProdutos ul li {
-    color: black;
-    font-weight: bold;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    transition: ease-in-out .1s;
-    width: 20%;
-}
-
-.containerListaProdutos ul li:hover {
+.mostrarTodos :hover {
     box-shadow: 3px 3px 13px 1px rgb(146 146 146);
 }
 
-.containerListaProdutos ul li img {
-    width: 100%;
-    max-width: 80px;
+.filtrarHortifruti {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+
+    position: absolute;
+    width: 122px;
+    height: 52px;
+    left: 335px;
+    top: 94px;
+
+    color: #12B886;;
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    border-radius: 8px;
 }
 
-.containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
+.filtrarPanificadora {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+
+    position: absolute;
+    width: 122px;
+    height: 52px;
+    left: 486px;
+    top: 94px;
+
+    color: #12B886;;
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    border-radius: 8px;
 }
 
-.containerListaProdutos ul li p {
-    font-size: 1.5rem;
-}
-.containerListaProdutos ul li span {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
+.filtrarLaticinios {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+
+    position: absolute;
+    width: 122px;
+    height: 52px;
+    left: 647px;
+    top: 94px;
+
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    border-radius: 8px;
 }
 
-/* PREÇO TOTAL */
-.containerPrecoTotal{
-    text-align: center;
+input {
+    position: absolute;
+    width: 260px;
+    height: 38px;
+    left: 925px;
+    top: 94px;
+
+    background: #F1F3F5;
+    border-radius: 8px;
 }
-.containerPrecoTotal p{
-    font-size: 1.4rem;
+
+.botaoBuscaPorNome {
+    box-sizing: border-box;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+
+    position: absolute;
+    width: 59px;
+    height: 44px;
+    left: 1199px;
+    top: 94px;
+
+    background: #12B886;
+    border: 1.5px solid #12B886;
+    border-radius: 8px;
+}
+
+.botaoBuscaPorNome  image {
+    position: absolute;
+    left: 12.5%;
+    right: 20.83%;
+    top: 12.5%;
+    bottom: 20.83%;
+
+    border: 1.58333px solid #FFFFFF;
+}
+
+.containerPrecoTotal {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1171px;
+    height: 56px;
+    left: 146px;
+    top: 190px;
+
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+
+.containerPrecoTotal p {
+    position: unset;
+    width: 135px;
+    height: 21px;
+    left: 207px;
+    top: 208px;
+
+    font-family: 'Poppins';
+    font-style: normal;
     font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    padding: 0 0 0 0;
+
+    color: #212529;
 }
-.containerPrecoTotal p span{}
+
+.containerPrecoTotal span {
+    position: absolute;
+    width: 65px;
+    height: 33px;
+    left: 1067px;
+    right: 0px;
+    top: 10px;
+    border-radius: 5px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    padding: 0 0 0 0;
+    
+    background-color: black;
+    color: white
+}
+
+main {
+    display: flex;
+    margin: 1px -317px 5px 143px;
+
+}
+
+main :hover {
+    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 270px 0 0 0;
+}
+
+li {
+    margin: 8px 0 0 0;
+    border-radius: 10px;
+}
+
+li img {
+    width: 300px;
+    height: 190px;
+    left: 146px;
+    top: 300px;
+    border-radius: 8px;
+}
+
+
