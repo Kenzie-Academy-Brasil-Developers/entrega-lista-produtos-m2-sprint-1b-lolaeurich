@@ -49,20 +49,20 @@ body {
     gap: 10px;
 
     position: absolute;
-    width: 177px;
+    width: 162px;
     height: 52px;
-    left: 146px;
+    left: 145px;
     top: 94px;
 
-    color: white;
-    background: #12B886;
-    border: 1.5px solid #12B886;
+    color: #12B886;;
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
     border-radius: 8px;
 }
 
 .mostrarTodos:hover {
-    background: rgba(18, 184, 134, 0.05);
-    color: #12B886;
+    background: #12B886;
+    color: white;
     border: 2px solid;
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
