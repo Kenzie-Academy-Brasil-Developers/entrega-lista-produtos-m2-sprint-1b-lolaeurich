@@ -1,10 +1,11 @@
 const bodyDom = document.querySelector('body')
+const main = document.querySelector('main')
 const header = criarHeader()
 const divProdutos = criarListaDeProdutos(produtos)
 
-
 bodyDom.appendChild(header)
-bodyDom.appendChild(divProdutos)
+bodyDom.appendChild(main)
+main.appendChild(divProdutos)
 
 //------------------------------------------------
 
@@ -154,15 +155,15 @@ function criarHeader() {
 
 function criarListaDeProdutos(arrayDeProdutos) {
 
-    const bodyDom = document.querySelector('body')
+    const main = document.querySelector('main')
 
     const mainAntigo = document.getElementById("listProdutos")
     if(mainAntigo !== null){
-        bodyDom.removeChild(mainAntigo)
+        main.removeChild(mainAntigo)
     }
 
 
-    const container = document.createElement("main")
+    const container = document.createElement("div")
     container.id = "listProdutos"
     container.className = "containerListaProdutos"
 
@@ -186,7 +187,7 @@ function criarListaDeProdutos(arrayDeProdutos) {
 
     }
     console.log(total);
-    bodyDom.appendChild(container)
+    main.appendChild(container)
     return container
 }
 criarListaDeProdutos(produtos)

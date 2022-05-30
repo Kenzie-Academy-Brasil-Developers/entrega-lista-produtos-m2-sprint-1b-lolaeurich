@@ -60,8 +60,11 @@ body {
     border-radius: 8px;
 }
 
-.mostrarTodos :hover {
-    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
+.mostrarTodos:hover {
+    background: rgba(18, 184, 134, 0.05);
+    color: #12B886;
+    border: 2px solid;
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
 .filtrarHortifruti {
@@ -85,6 +88,12 @@ body {
     background: rgba(18, 184, 134, 0.05);
     border: 1.5px solid rgba(18, 184, 134, 0.05);
     border-radius: 8px;
+}
+.filtrarHortifruti:hover {
+    background: #12B886;
+    color: white;
+    border: 2px solid;
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
 .filtrarPanificadora {
@@ -110,6 +119,13 @@ body {
     border-radius: 8px;
 }
 
+.filtrarPanificadora:hover {
+    background: #12B886;
+    color: white;
+    border: 2px solid;
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
 .filtrarLaticinios {
     box-sizing: border-box;
     cursor: pointer;
@@ -131,6 +147,13 @@ body {
     background: rgba(18, 184, 134, 0.05);
     border: 1.5px solid rgba(18, 184, 134, 0.05);
     border-radius: 8px;
+}
+
+.filtrarLaticinios:hover {
+    background: #12B886;
+    color: white;
+    border: 2px solid;
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
 input {
@@ -231,14 +254,12 @@ input {
 main {
     display: flex;
     margin: 1px -317px 5px 143px;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
 
-main :hover {
-    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
-}
-
-ul {
+.containerListaProdutos ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -247,9 +268,13 @@ ul {
     padding: 270px 0 0 0;
 }
 
-li {
-    margin: 8px 0 0 0;
+.containerListaProdutos ul li{
+    margin: 8px 20px 0 0;
     border-radius: 10px;
+}
+
+.containerListaProdutos ul li:hover {
+    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
 }
 
 li img {
