@@ -22,6 +22,7 @@ function filtrarHortifruti(arrayDeProdutos){
             result.push(element)
     }
     criarListaDeProdutos(result)
+    exibirBotaoAtivo(botaoFiltrarHortiFruti)
     return result
 }
 
@@ -35,6 +36,7 @@ function filtrarPanificadora(arrayDeProdutos){
             result.push(element)
     }
     criarListaDeProdutos(result)
+    exibirBotaoAtivo(botaoFiltrarPanificadora)
     return result
 }
 
@@ -48,6 +50,7 @@ function filtrarLaticinios(arrayDeProdutos){
             result.push(element)
     }
     criarListaDeProdutos(result)
+    exibirBotaoAtivo(botaoFiltrarLaticinios)
     return result
 }
 
@@ -64,6 +67,28 @@ botaoFiltrarPanificadora.addEventListener('click', () => filtrarPanificadora(pro
 
 const botaoFiltrarLaticinios= document.querySelector('.filtrarLaticinios')
 botaoFiltrarLaticinios.addEventListener('click', () => filtrarLaticinios(produtos))
+
+
+
+//botaoMostrarTodos.onclick(() => exibirBotaoAtivo(botaoMostrarTodos))
+//botaoFiltrarHortiFruti.onclick(() => exibirBotaoAtivo(botaoFiltrarHortiFruti))
+//botaoFiltrarPanificadora.onclick(() => exibirBotaoAtivo(botaoFiltrarPanificadora))
+//botaoFiltrarLaticinios.onclick(() => exibirBotaoAtivo(botaoFiltrarLaticinios))
+
+let botaoAtivo = null
+
+function exibirBotaoAtivo(botao) {
+    botaoAtivo = botao
+
+    botaoMostrarTodos.classList.remove("active")
+    botaoFiltrarHortiFruti.classList.remove("active")
+    botaoFiltrarPanificadora.classList.remove("active")
+    botaoFiltrarLaticinios.classList.remove("active")
+
+    console.log(botao)
+    botao.classList.add("active")
+    console.log(botao)
+}
 
 
 //FUNÇÃO DE BUSCA POR NOME
@@ -160,6 +185,8 @@ function criarListaDeProdutos(arrayDeProdutos) {
     const mainAntigo = document.getElementById("listProdutos")
     if(mainAntigo !== null){
         main.removeChild(mainAntigo)
+
+        exibirBotaoAtivo(botaoMostrarTodos)
     }
 
 
@@ -187,6 +214,7 @@ function criarListaDeProdutos(arrayDeProdutos) {
 
     }
     console.log(total);
+    //exibirBotaoAtivo(botaoMostrarTodos)
     main.appendChild(container)
     return container
 }
