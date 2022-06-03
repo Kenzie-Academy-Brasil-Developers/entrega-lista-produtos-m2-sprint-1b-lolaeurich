@@ -429,7 +429,7 @@ aside .imagemDoCarrinho {
     width: 30px;
     height: 26px;
 
-    background-image: url(src/img/trash.jpg);
+    background-image: url("../img/lixo.jpeg");
 
     background-size: auto;
     background-repeat: no-repeat;

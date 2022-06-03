@@ -268,7 +268,7 @@ function criarAside (){
  
          const botaoRemover = document.createElement('button')
          botaoRemover.className = "botao-remover"
-         botaoRemover.src = "src/img/trash.jpg"
+         botaoRemover.src = "./src/img/lixo.jpeg"
          
          produtosComprados.appendChild(botaoRemover)
          botaoRemover.addEventListener('click', () => removerDoCarrinho(itensNoCarrinho[i]))
