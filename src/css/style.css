@@ -2,26 +2,27 @@ body {
     max-width: 1000px;
     width: 100%;
     background: #FFFFFF;
-    margin: 0 0 0 0;
+    margin: -105px 0 0 0;
 }
 
-.nomePrincipal {
+header {
+    display: flex;
     position: absolute;
     width: 1463px;
     height: 55px;
     left: 0px;
     top: 0px;
-
+    
     background: #FFFFFF;
     box-shadow: 0px 4px 40px -20px rgba(0, 0, 0, 0.25);
 }
 
-.nomePrincipal p {
+header h1 {
     position: absolute;
-    width: 80px;
+    width: 92px;
     height: 27px;
     left: 692px;
-    top: 0px;
+    top: 3px;
 
     font-family: 'Poppins';
     font-style: normal;
@@ -33,10 +34,40 @@ body {
 }
 
 .filtersContainer {
+    box-sizing: border-box;
+    
     display: flex;
     flex-direction: row;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 26px;
+    gap: 10px;
+    
+    position: absolute;
+    left: 146px;
+    top: 94px;
+    
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    border-radius: 8px;
+} 
 
+#filters button {
+    width: 145px;
+    height: 38px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    border:  rgba(18, 184, 134, 0.05) 2px solid;
+    border-radius: 5px;
+}
 
 .mostrarTodos {
     box-sizing: border-box;
@@ -46,10 +77,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 14px 26px;
     gap: 10px;
 
-    position: absolute;
     width: 162px;
     height: 52px;
     left: 145px;
@@ -63,32 +92,9 @@ body {
 
 .mostrarTodos:hover {
     background: #12B886;
-    color: white;
+    color: #FFFFFF;
     border: 2px solid;
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
-}
-
-.novoMostrarTodos {
-    box-sizing: border-box;
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 26px;
-    gap: 10px;
-
-    position: absolute;
-    width: 162px;
-    height: 52px;
-    left: 145px;
-    top: 94px;
-
-    color: #12B886;
-    background: rgba(18, 184, 134, 0.05);
-    border: 1.5px solid rgba(18, 184, 134, 0.05);
-    border-radius: 8px;
 }
 
 .filtrarHortifruti {
@@ -102,7 +108,6 @@ body {
     padding: 14px 26px;
     gap: 10px;
 
-    position: absolute;
     width: 122px;
     height: 52px;
     left: 335px;
@@ -113,6 +118,7 @@ body {
     border: 1.5px solid rgba(18, 184, 134, 0.05);
     border-radius: 8px;
 }
+
 .filtrarHortifruti:hover {
     background: #12B886;
     color: white;
@@ -131,7 +137,6 @@ body {
     padding: 14px 26px;
     gap: 10px;
 
-    position: absolute;
     width: 122px;
     height: 52px;
     left: 486px;
@@ -161,7 +166,6 @@ body {
     padding: 14px 26px;
     gap: 10px;
 
-    position: absolute;
     width: 122px;
     height: 52px;
     left: 647px;
@@ -180,34 +184,40 @@ body {
     box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
+.active {
+    background: #12B886;
+    color: white;
+    border: 2px solid;
+    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
 
+.campoBuscaPorNome {
+    box-sizing: border-box;
 
-input {
     position: absolute;
-    width: 260px;
-    height: 38px;
-    left: 925px;
+    width: 324px;
+    height: 52px;
+    left: 975px;
     top: 94px;
 
     background: #F1F3F5;
     border-radius: 8px;
 }
 
-.botaoBuscaPorNome {
+.botaoBuscarPorNome {
     box-sizing: border-box;
     cursor: pointer;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 14px 26px;
+    padding: 24px 26px;
     gap: 10px;
 
     position: absolute;
     width: 59px;
     height: 44px;
-    left: 1199px;
+    left: 1304px;
     top: 94px;
 
     background: #12B886;
@@ -215,7 +225,7 @@ input {
     border-radius: 8px;
 }
 
-.botaoBuscaPorNome  image {
+.botaoBuscarPorNome image {
     position: absolute;
     left: 12.5%;
     right: 20.83%;
@@ -225,85 +235,32 @@ input {
     border: 1.58333px solid #FFFFFF;
 }
 
-.containerPrecoTotal {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1171px;
-    height: 56px;
-    left: 146px;
-    top: 190px;
-
-    background: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 30px -10px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-}
-
-.containerPrecoTotal p {
-    position: unset;
-    width: 135px;
-    height: 21px;
-    left: 207px;
-    top: 208px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-    padding: 0 0 0 0;
-
-    color: #212529;
-}
-
-.containerPrecoTotal span {
-    position: absolute;
-    width: 65px;
-    height: 33px;
-    left: 1067px;
-    right: 0px;
-    top: 10px;
-    border-radius: 5px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 30px;
-    padding: 0 0 0 0;
-    
-    background-color: black;
-    color: white
-}
-
 main {
     display: flex;
-    margin: 1px -317px 5px 143px;
+    margin: 1px -104px 5px 143px;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
-.containerListaProdutos ul{
+main ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    padding: 270px 0 0 0;
+    padding: 252px 0 0 0;
 }
 
-.containerListaProdutos ul li{
+main ul li {
     margin: 8px 20px 0 0;
     border-radius: 10px;
 }
 
-.containerListaProdutos ul li:hover {
+main ul li:hover {
     box-shadow: 3px 3px 13px 1px rgb(146 146 146);
 }
 
-li img {
+main ul li img {
     width: 300px;
     height: 190px;
     left: 146px;
@@ -311,11 +268,173 @@ li img {
     border-radius: 8px;
 }
 
-
-
-.active {
-    background: #12B886;
-    color: white;
-    border: 2px solid;
-    box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+main ul li p {
+    font-size: 16px;
+    color: black;
+    font-weight: 900;
+    font-size: large;
 }
+
+main ul li p + p {
+    font-weight: 400;
+    font-size: 17px;
+    color: #868E96;
+}
+
+main ul li p + p + p{
+    font-weight: 400;
+    font-size: 12px;
+    color: #868E96;
+}
+
+main ul li p + p + p + p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #868E96;
+}
+
+.paragrafoDePreco {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #212529;
+}
+
+main ul li button {
+    width: auto;
+    height: auto;
+    color: #12B886;
+    background: rgba(18, 184, 134, 0.05);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    border-radius: 8px;
+    margin: 0 0 0 196px;
+}
+
+aside .caixaDeTitulo{
+    position: absolute;
+    width: 270px;
+    height: 41px;
+    left: 1100px;
+    top: 190px;
+
+    background: #12B886;
+    border-radius: 8px 8px 0px 0px;
+}
+
+aside .nomeDoCarrinho {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 7px;
+    margin: -16px 0 0 80px;
+
+    color: white;
+}
+
+aside .imagemDoCarrinho {
+    padding: 15px 0 0 12px;
+}
+
+.carrinho-de-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: space-between;
+    padding: 17px 1px 0 0;
+    gap: 40px;
+
+    position: absolute;
+    width: 265px;
+    height: 337px;
+    left: 1101px;
+    top: 232px;
+
+    border: #212529 solid 2px;
+    background: #FFFFFF;
+    border-radius: 0px 0px 12px 12px;
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+}
+
+.carrinho-de-produtos scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+  }
+
+#quantidade {
+    position: absolute;
+    align-items: center;
+    width: 265px;
+    height: 32px;
+    left: 1105px;
+    top: 588px;
+
+    background: #F8F9FA;
+}
+
+.adicionados {
+    display: flex;
+    flex-direction: row;
+    size: 10px;
+    width: 0;
+    height: 96px;
+    padding: 0 0 0 5px;
+}
+
+.adicionados img {
+    border-radius: 10px;
+    width: 100px;
+    height: 80px;
+    size: 10px;
+}
+
+.adicionados h2 {
+    width: 0;
+    height: 0;
+    font-size: 18px;
+    margin: 0px 0 0 10px;
+}
+
+.adicionados h3 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 28px;
+
+    color: #868E96;
+    width: 0;
+    height: 0;
+    padding: 0 0 0 0;
+    margin: 29px 0 0 2px;
+}
+
+.adicionados h4 {
+    display: flex;
+    width: 0;
+    height: 0;
+    padding: 0 0 0 0;
+    margin: 64px 0 0 2px;
+    text-align: left;
+}
+
+.botao-remover {
+    margin: 0 0 0 112px;
+    width: 30px;
+    height: 26px;
+
+    background-image: url(src/img/trash.jpg);
+
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: white;
+}
+
